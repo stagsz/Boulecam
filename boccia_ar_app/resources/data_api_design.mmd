@@ -1,0 +1,31 @@
+classDiagram
+    class Main{
+        +run()
+    }
+    class ObjectRecognition{
+        +detect_boccia_balls(image: Image) List[BocciaBall]
+        +measure_distances(small_ball: BocciaBall, large_balls: List[BocciaBall]) Dict[BocciaBall, float]
+    }
+    class BocciaBall{
+        +float x
+        +float y
+        +float radius
+        +__init__(x: float, y: float, radius: float)
+    }
+    class ARVisualization{
+        +display_ar(image: Image, balls: List[BocciaBall], distances: Dict[BocciaBall, float])
+    }
+    class Interface{
+        +display_interface()
+    }
+    class Calibration{
+        +calibrate()
+    }
+    class LanguageSupport{
+        +set_language(language: str)
+    }
+    Main -- ObjectRecognition: uses
+    Main -- ARVisualization: uses
+    Main -- Interface: uses
+    Main -- Calibration: uses
+    Main -- LanguageSupport: uses
