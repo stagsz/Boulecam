@@ -1,5 +1,0 @@
-kivy==2.0.0
-opencv-python==4.5.1.48
-opencv-contrib-python==4.5.1.48
-arcore==1.23.0
-arkit==3.0
